@@ -10,7 +10,8 @@ A landing page that collects InMarket's in-house creative tools in one place.
 |---|---|
 | InMarket Journey Studio | https://ushah-ux.github.io/InMarket-User-Journey-Creator/ |
 | DOOH Proof of Placement Studio | https://ushah-ux.github.io/InMarket-POP-Placement-Studio/ |
-| CTV & Social Spot Builder | https://ushah-ux.github.io/ctv-social-spot-builder/ |
+| CTV & Social Spot Builder | http://localhost:8765/ (installed app; web version at https://ushah-ux.github.io/ctv-social-spot-builder/) |
+| InMarket Logo Hub | https://inmarket-logo-hub.vercel.app/ |
 
 ## Adding a tool
 

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <rect width="400" height="400" fill="#f5f6f8"/>
+  <!-- header band with search -->
+  <rect width="400" height="118" fill="#121e33"/>
+  <rect x="28" y="30" width="96" height="9" rx="4.5" fill="#ffffff"/>
+  <rect x="28" y="46" width="62" height="6" rx="3" fill="#80878b"/>
+  <rect x="28" y="66" width="268" height="34" rx="8" fill="#ffffff" opacity=".12" stroke="#ffffff" stroke-opacity=".18"/>
+  <circle cx="47" cy="83" r="6" fill="none" stroke="#c9d0d4" stroke-width="2"/><path d="M51.5 87.5 L56 92" stroke="#c9d0d4" stroke-width="2" stroke-linecap="round"/>
+  <rect x="64" y="79" width="92" height="8" rx="4" fill="#c9d0d4" opacity=".7"/>
+  <rect x="164" y="76" width="2" height="14" fill="#7dbe42"/>
+  <rect x="304" y="66" width="68" height="34" rx="8" fill="#7dbe42"/>
+  <text x="338" y="88" text-anchor="middle" font-family="Montserrat,Arial,sans-serif" font-weight="700" font-size="12" fill="#121e33">Search</text>
+
+  <g font-family="Montserrat,Arial,sans-serif">
+  <!-- row 1 -->
+  <g transform="translate(28 140)">
+    <rect width="104" height="104" rx="10" fill="#fff" stroke="#d5e3ed" stroke-width="2"/>
+    <circle cx="52" cy="46" r="22" fill="#4591c7"/><circle cx="52" cy="46" r="10" fill="#fff"/>
+    <rect x="30" y="80" width="44" height="7" rx="3.5" fill="#243e66"/>
+  </g>
+  <g transform="translate(148 140)">
+    <rect width="104" height="104" rx="10" fill="#fff" stroke="#7dbe42" stroke-width="3"/>
+    <text x="52" y="38" text-anchor="middle" font-size="10" font-weight="700" fill="#80878b" letter-spacing="1">AVAILABLE AT</text>
+    <path d="M28 52 h48 l-8 22 h-32 Z" fill="#7dbe42"/>
+    <rect x="34" y="80" width="36" height="7" rx="3.5" fill="#243e66"/>
+    <circle cx="94" cy="10" r="12" fill="#7dbe42"/><path d="M88 10 l4 4 l8 -8" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(268 140)">
+    <rect width="104" height="104" rx="10" fill="#fff" stroke="#d5e3ed" stroke-width="2"/>
+    <path d="M52 22 L76 64 H28 Z" fill="#243e66"/>
+    <rect x="30" y="76" width="44" height="7" rx="3.5" fill="#4591c7"/>
+  </g>
+  <!-- row 2 -->
+  <g transform="translate(28 260)">
+    <rect width="104" height="104" rx="10" fill="#fff" stroke="#d5e3ed" stroke-width="2"/>
+    <rect x="26" y="26" width="52" height="40" rx="20" fill="#aed7f4"/><rect x="40" y="36" width="24" height="20" rx="10" fill="#4591c7"/>
+    <rect x="30" y="78" width="44" height="7" rx="3.5" fill="#243e66"/>
+  </g>
+  <g transform="translate(148 260)">
+    <rect width="104" height="104" rx="10" fill="#fff" stroke="#d5e3ed" stroke-width="2"/>
+    <text x="52" y="38" text-anchor="middle" font-size="10" font-weight="700" fill="#80878b" letter-spacing="1">ONLY AT</text>
+    <rect x="30" y="50" width="44" height="24" rx="4" fill="#243e66"/><rect x="38" y="58" width="28" height="8" rx="2" fill="#c7e6fc"/>
+    <rect x="34" y="82" width="36" height="7" rx="3.5" fill="#80878b"/>
+  </g>
+  <g transform="translate(268 260)">
+    <rect width="104" height="104" rx="10" fill="#fff" stroke="#d5e3ed" stroke-width="2"/>
+    <!-- InMarket mark -->
+    <g transform="translate(34 24)"><rect x="0" y="8" width="7" height="34" rx="2" fill="#121e33"/><rect x="14" y="0" width="9" height="50" fill="#7dbe42"/><rect x="30" y="8" width="7" height="34" rx="2" fill="#121e33"/></g>
+    <rect x="30" y="82" width="44" height="7" rx="3.5" fill="#243e66"/>
+  </g>
+  </g>
+  <!-- download pill -->
+  <g transform="translate(212 340)">
+    <rect width="132" height="34" rx="17" fill="#121e33"/>
+    <path d="M24 10 v12 M18 17 l6 6 l6 -6 M17 26 h14" fill="none" stroke="#7dbe42" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="42" y="22" font-family="Montserrat,Arial,sans-serif" font-weight="700" font-size="12" fill="#fff">PNG · SVG</text>
+  </g>
+</svg>

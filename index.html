@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>InMarket Creative Tools</title>
-<meta name="description" content="One home for InMarket's in-house creative tools: consumer journeys, DOOH proof of placement, CTV and social spots.">
+<meta name="description" content="One home for InMarket's in-house creative tools: consumer journeys, DOOH proof of placement, CTV and social spots, and brand logos.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,7 +66,10 @@ h1 span{color:var(--green-deep)}
 .info p{margin:0 0 14px;color:var(--muted);font-size:14px}
 .chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 16px;padding:0;list-style:none}
 .chips li{font-size:11.5px;font-weight:600;background:var(--n300);color:var(--metric);border-radius:999px;padding:3px 10px}
-.cta{margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:8px;border-radius:999px;background:var(--night);color:#fff;text-decoration:none;font-weight:600;font-size:13px;padding:9px 18px;transition:background .15s}
+.actions{margin-top:auto;display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px}
+.alt{font-size:12.5px;font-weight:600;color:var(--magnet);text-decoration:underline;text-underline-offset:3px}
+.alt:hover{color:var(--metric)}
+.cta{display:inline-flex;align-items:center;gap:8px;border-radius:999px;background:var(--night);color:#fff;text-decoration:none;font-weight:600;font-size:13px;padding:9px 18px;transition:background .15s}
 .cta:hover{background:var(--metric)}
 .cta svg{width:14px;height:14px}
 .cta.disabled{background:var(--n400);color:var(--n600);pointer-events:none}
@@ -103,7 +106,7 @@ footer strong{color:var(--ink);font-weight:700;letter-spacing:.12em;text-transfo
   <section class="hero">
     <p class="eyebrow"><span class="mark" aria-hidden="true"><i></i><i></i><i></i></span>Creative Tools</p>
     <h1>Build client-ready creative <span>in minutes.</span></h1>
-    <p class="lead">In-house tools for visualizing InMarket campaigns: consumer journeys, proof of placement and video spots. Pick a tool to get started.</p>
+    <p class="lead">In-house tools for visualizing InMarket campaigns: consumer journeys, proof of placement, video spots and brand logos. Pick a tool to get started.</p>
   </section>
 
   <div class="section-head">
@@ -147,10 +150,21 @@ const TOOLS = [
   {
     name: "CTV & Social Spot Builder",
     kicker: "Video · CTV & Social",
-    url: "https://ushah-ux.github.io/ctv-social-spot-builder/",
+    // Opens the copy each person installed (the installer always runs it at localhost:8765).
+    url: "http://localhost:8765/",
+    // Shown under the button for anyone who hasn't installed it yet.
+    fallback: { label: "Not installed? Use the web version", url: "https://ushah-ux.github.io/ctv-social-spot-builder/" },
     thumb: "thumbs/ctv-social-spot-builder.svg",
-    description: "Build CTV and social video spots in one place, sized for the big screen and the vertical feed.",
-    tags: ["16:9", "9:16", "CTV", "Social"],
+    description: "Turn a vertical social video into a 16:9 CTV spot: the video plays inside a phone, framed by brand background, logo, handle, stats and a QR call to action. Export MP4 or PNG.",
+    tags: ["Instagram", "TikTok", "YouTube", "MP4 export", "Installed app"]
+  },
+  {
+    name: "InMarket Logo Hub",
+    kicker: "Brand assets · Logos",
+    url: "https://inmarket-logo-hub.vercel.app/",
+    thumb: "thumbs/logo-hub.svg",
+    description: "Every brand and retailer logo in one place. Search by brand, retailer or tag, grab “Available at” and “Only at” lockups, and upload new assets for the team.",
+    tags: ["Search", "Retailer lockups", "Download", "Upload"],
     isNew: true
   }
 ];
@@ -171,7 +185,10 @@ document.getElementById("tools").innerHTML = TOOLS.map(t => {
       <h3><a ${link}>${esc(t.name)}</a>${t.isNew ? '<span class="badge">New</span>' : ""}</h3>
       <p>${esc(t.description)}</p>
       ${t.tags?.length ? `<ul class="chips">${t.tags.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}
-      <a class="cta${live ? "" : " disabled"}" ${link}>${live ? "Launch tool" : "Coming soon"} ${live ? arrow : ""}</a>
+      <div class="actions">
+        <a class="cta${live ? "" : " disabled"}" ${link}>${live ? "Launch tool" : "Coming soon"} ${live ? arrow : ""}</a>
+        ${t.fallback ? `<a class="alt" href="${esc(t.fallback.url)}" target="_blank" rel="noopener">${esc(t.fallback.label)}</a>` : ""}
+      </div>
     </div>
   </li>`;
 }).join("");
