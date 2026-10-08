@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>InMarket Creative Tools</title>
+<meta name="description" content="One home for InMarket's in-house creative tools: consumer journeys, DOOH proof of placement, CTV and social spots, and brand logos.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap">
+<style>
+/* Brand tokens from the InMarket 2025 Brand Guidelines (shared with Journey Studio). */
+:root{
+  --night:#121e33; --metric:#243e66; --magnet:#4591c7; --magnet-light:#aed7f4; --display:#c7e6fc; --conv:#d5e3ed;
+  --green:#7dbe42; --green-deep:#69a636;
+  --n100:#ffffff; --n200:#f5f6f8; --n300:#e9eff2; --n400:#c9d0d4; --n500:#80878b; --n600:#45474b;
+  --bg:var(--n200); --panel:var(--n100); --ink:var(--night); --muted:#4b5d78; --line:var(--conv);
+  --radius:16px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;overflow-x:clip;background:var(--bg);color:var(--ink);font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+/* Header */
+header{background:var(--panel);border-bottom:1px solid var(--line)}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px}
+.logo img{display:block;height:24px;width:auto}
+.topbar .tag{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+/* Hero */
+.hero{padding:56px 0 40px;position:relative}
+.hero::before{content:"";position:absolute;right:-160px;top:-200px;width:520px;height:520px;border-radius:50%;background:radial-gradient(closest-side,var(--display),transparent);opacity:.8;pointer-events:none}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--green-deep);margin:0 0 12px;display:flex;align-items:center;gap:10px}
+.eyebrow .mark{display:inline-grid;grid-auto-flow:column;gap:3px;align-items:center}
+.eyebrow .mark i{display:block;width:4px;height:16px;background:var(--green);border-radius:1px}
+.eyebrow .mark i:first-child,.eyebrow .mark i:last-child{height:11px;background:var(--metric)}
+h1{font-size:clamp(30px,4.4vw,46px);line-height:1.1;font-weight:800;letter-spacing:-.02em;margin:0 0 14px;max-width:16ch;position:relative}
+h1 span{color:var(--green-deep)}
+.lead{font-size:17px;color:var(--muted);max-width:58ch;margin:0;position:relative}
+
+/* Tool list */
+.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:8px 0 18px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.section-head h2{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin:0}
+.section-head .count{font-size:13px;color:var(--muted);font-weight:500}
+
+.tools{list-style:none;margin:0 0 64px;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,520px),1fr));gap:20px}
+.tool{display:flex;gap:22px;align-items:stretch;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px;transition:border-color .18s,box-shadow .18s,transform .18s}
+.tool:hover{border-color:var(--magnet-light);box-shadow:0 10px 30px -12px rgba(18,30,51,.22);transform:translateY(-2px)}
+
+.thumb{flex:none;align-self:flex-start;width:180px;height:180px;border-radius:12px;overflow:hidden;position:relative;display:block;background:var(--n300);border:1px solid var(--line);text-decoration:none}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
+.thumb::after{content:"Open tool \2192";position:absolute;inset:auto 10px 10px 10px;background:var(--night);color:#fff;font-size:12px;font-weight:700;border-radius:999px;padding:7px 12px;text-align:center;opacity:0;transform:translateY(6px);transition:opacity .18s,transform .18s}
+.tool:hover .thumb img,.thumb:focus-visible img{transform:scale(1.04)}
+.tool:hover .thumb::after,.thumb:focus-visible::after{opacity:1;transform:none}
+
+.info{display:flex;flex-direction:column;min-width:0;flex:1}
+.info .kicker{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--magnet);margin:2px 0 6px}
+.info h3{font-size:19px;font-weight:700;line-height:1.25;margin:0 0 8px}
+.info h3 a{text-decoration:none}
+.info p{margin:0 0 14px;color:var(--muted);font-size:14px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 16px;padding:0;list-style:none}
+.chips li{font-size:11.5px;font-weight:600;background:var(--n300);color:var(--metric);border-radius:999px;padding:3px 10px}
+.actions{margin-top:auto;display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px}
+.alt{font-size:12.5px;font-weight:600;color:var(--magnet);text-decoration:underline;text-underline-offset:3px}
+.alt:hover{color:var(--metric)}
+.cta{display:inline-flex;align-items:center;gap:8px;border-radius:999px;background:var(--night);color:#fff;text-decoration:none;font-weight:600;font-size:13px;padding:9px 18px;transition:background .15s}
+.cta:hover{background:var(--metric)}
+.cta svg{width:14px;height:14px}
+.cta.disabled{background:var(--n400);color:var(--n600);pointer-events:none}
+.badge{display:inline-block;margin-left:8px;vertical-align:middle;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--green);color:var(--night);border-radius:999px;padding:2px 8px}
+
+footer{border-top:1px solid var(--line);background:var(--panel)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-top:22px;padding-bottom:22px;font-size:12.5px;color:var(--muted)}
+footer strong{color:var(--ink);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:11.5px}
+
+@media (max-width:600px){
+  .wrap{padding:0 16px}
+  .topbar .tag{display:none}
+  .hero{padding:36px 0 28px}
+  .tool{gap:14px;padding:14px}
+  .thumb{width:112px;height:112px;border-radius:10px}
+  .thumb::after{display:none}
+  .info h3{font-size:16.5px}
+  .info p{font-size:13.5px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap topbar">
+    <a class="logo" href="./" aria-label="InMarket Creative Tools home">
+      <img src="inmarket-logo.png" srcset="inmarket-logo.png 1x, inmarket-logo@2x.png 2x" alt="InMarket" width="136" height="24">
+    </a>
+    <span class="tag">Creative Tools</span>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <p class="eyebrow"><span class="mark" aria-hidden="true"><i></i><i></i><i></i></span>Creative Tools</p>
+    <h1>Build client-ready creative <span>in minutes.</span></h1>
+    <p class="lead">In-house tools for visualizing InMarket campaigns: consumer journeys, proof of placement, video spots and brand logos. Pick a tool to get started.</p>
+  </section>
+
+  <div class="section-head">
+    <h2>All tools</h2>
+    <span class="count" id="count"></span>
+  </div>
+  <ul class="tools" id="tools"></ul>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><strong>InMarket</strong> &nbsp;·&nbsp; Real-time marketing &amp; measurement</span>
+    <span>Internal creative tools</span>
+  </div>
+</footer>
+
+<script>
+/*
+  ── ADD A NEW TOOL ──────────────────────────────────────────────
+  Copy one block below, fill it in, and drop a square thumbnail
+  (SVG, PNG or JPG, ideally 800×800) into the /thumbs folder.
+  Set isNew:true to show a "New" badge.
+*/
+const TOOLS = [
+  {
+    name: "InMarket Journey Studio",
+    kicker: "Consumer journey · Video",
+    url: "https://ushah-ux.github.io/InMarket-User-Journey-Creator/",
+    thumb: "thumbs/journey-studio.svg",
+    description: "Describe a consumer journey and get an animated 3D map of every ad moment along the way. Edit each stop, then present it live or export a 1920×1080 video.",
+    tags: ["CTV", "DOOH", "Mobile", "Social", "MP4 export"]
+  },
+  {
+    name: "DOOH Proof of Placement Studio",
+    kicker: "Out-of-home · Deck",
+    url: "https://ushah-ux.github.io/InMarket-POP-Placement-Studio/",
+    thumb: "thumbs/pop-placement-studio.svg",
+    description: "Warp campaign creative onto the screens in real out-of-home placement photos, then build the proof-of-placement deck for the client.",
+    tags: ["1920×1080", "1080×1920", "Corner pins", "Deck export"]
+  },
+  {
+    name: "CTV & Social Spot Builder",
+    kicker: "Video · CTV & Social",
+    // Opens the copy each person installed (the installer always runs it at localhost:8765).
+    url: "http://localhost:8765/",
+    // Shown under the button for anyone who hasn't installed it yet.
+    fallback: { label: "Not installed? Use the web version", url: "https://ushah-ux.github.io/ctv-social-spot-builder/" },
+    thumb: "thumbs/ctv-social-spot-builder.svg",
+    description: "Turn a vertical social video into a 16:9 CTV spot: the video plays inside a phone, framed by brand background, logo, handle, stats and a QR call to action. Export MP4 or PNG.",
+    tags: ["Instagram", "TikTok", "YouTube", "MP4 export", "Installed app"]
+  },
+  {
+    name: "InMarket Logo Hub",
+    kicker: "Brand assets · Logos",
+    url: "https://inmarket-logo-hub.vercel.app/",
+    thumb: "thumbs/logo-hub.svg",
+    description: "Every brand and retailer logo in one place. Search by brand, retailer or tag, grab “Available at” and “Only at” lockups, and upload new assets for the team.",
+    tags: ["Search", "Retailer lockups", "Download", "Upload"],
+    isNew: true
+  }
+];
+
+const arrow = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>';
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+document.getElementById("tools").innerHTML = TOOLS.map(t => {
+  const live = Boolean(t.url);
+  const link = live ? `href="${esc(t.url)}" target="_blank" rel="noopener"` : `aria-disabled="true"`;
+  return `
+  <li class="tool">
+    <a class="thumb" ${link} aria-label="Open ${esc(t.name)}">
+      <img src="${esc(t.thumb)}" alt="" loading="lazy" width="180" height="180">
+    </a>
+    <div class="info">
+      <div class="kicker">${esc(t.kicker || "")}</div>
+      <h3><a ${link}>${esc(t.name)}</a>${t.isNew ? '<span class="badge">New</span>' : ""}</h3>
+      <p>${esc(t.description)}</p>
+      ${t.tags?.length ? `<ul class="chips">${t.tags.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}
+      <div class="actions">
+        <a class="cta${live ? "" : " disabled"}" ${link}>${live ? "Launch tool" : "Coming soon"} ${live ? arrow : ""}</a>
+        ${t.fallback ? `<a class="alt" href="${esc(t.fallback.url)}" target="_blank" rel="noopener">${esc(t.fallback.label)}</a>` : ""}
+      </div>
+    </div>
+  </li>`;
+}).join("");
+
+document.getElementById("count").textContent = `${TOOLS.length} tool${TOOLS.length === 1 ? "" : "s"}`;
+</script>
+</body>
+</html>
