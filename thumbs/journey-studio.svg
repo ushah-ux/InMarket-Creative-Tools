@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e3eefa"/><stop offset="1" stop-color="#c7e6fc"/></linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#sky)"/>
+  <!-- isometric ground -->
+  <path d="M200 120 L380 220 L200 320 L20 220 Z" fill="#ffffff" stroke="#d5e3ed" stroke-width="2"/>
+  <path d="M20 220 L200 320 L200 336 L20 236 Z" fill="#d5e3ed"/>
+  <path d="M380 220 L200 320 L200 336 L380 236 Z" fill="#aed7f4"/>
+  <!-- route -->
+  <path d="M80 222 C130 190, 150 260, 200 236 S270 170, 320 214" fill="none" stroke="#7dbe42" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 12"/>
+  <!-- house -->
+  <g transform="translate(62 176)"><path d="M0 22 L18 8 L36 22 L36 46 L0 46 Z" fill="#243e66"/><path d="M-4 24 L18 4 L40 24" fill="none" stroke="#121e33" stroke-width="4" stroke-linejoin="round"/><rect x="13" y="30" width="10" height="16" fill="#aed7f4"/></g>
+  <!-- billboard -->
+  <g transform="translate(180 170)"><rect x="17" y="30" width="4" height="34" fill="#45474b"/><rect x="0" y="0" width="40" height="32" rx="3" fill="#121e33"/><rect x="4" y="4" width="32" height="24" rx="1" fill="#7dbe42"/></g>
+  <!-- store -->
+  <g transform="translate(298 168)"><rect x="0" y="12" width="44" height="36" fill="#243e66"/><path d="M-4 12 h52 l-4 -10 h-44 Z" fill="#4591c7"/><rect x="16" y="28" width="12" height="20" fill="#aed7f4"/></g>
+  <!-- ad bubbles -->
+  <g font-family="Montserrat,Arial,sans-serif" font-weight="700" font-size="13" text-anchor="middle">
+    <g transform="translate(80 120)"><rect x="-34" y="-16" width="68" height="30" rx="15" fill="#121e33"/><text y="4" fill="#fff">CTV</text><path d="M-6 14 L0 24 L6 14 Z" fill="#121e33"/></g>
+    <g transform="translate(200 120)"><rect x="-38" y="-16" width="76" height="30" rx="15" fill="#121e33"/><text y="4" fill="#fff">DOOH</text><path d="M-6 14 L0 24 L6 14 Z" fill="#121e33"/></g>
+    <g transform="translate(320 120)"><rect x="-44" y="-16" width="88" height="30" rx="15" fill="#7dbe42"/><text y="4" fill="#121e33">InStore</text><path d="M-6 14 L0 24 L6 14 Z" fill="#7dbe42"/></g>
+  </g>
+  <!-- stop pins -->
+  <g fill="#7dbe42" stroke="#fff" stroke-width="3"><circle cx="80" cy="222" r="8"/><circle cx="200" cy="236" r="8"/><circle cx="320" cy="214" r="8"/></g>
+  <!-- play bar -->
+  <rect x="40" y="356" width="320" height="6" rx="3" fill="#ffffff"/>
+  <rect x="40" y="356" width="190" height="6" rx="3" fill="#121e33"/>
+  <circle cx="230" cy="359" r="8" fill="#7dbe42" stroke="#fff" stroke-width="3"/>
+</svg>

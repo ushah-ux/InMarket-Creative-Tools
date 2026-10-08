@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <rect width="400" height="400" fill="#e9eff2"/>
+  <!-- store interior -->
+  <rect y="250" width="400" height="150" fill="#c9d0d4"/>
+  <path d="M0 250 L400 250" stroke="#80878b" stroke-width="2"/>
+  <g fill="#ffffff" opacity=".9"><rect x="30" y="34" width="90" height="8" rx="4"/><rect x="155" y="34" width="90" height="8" rx="4"/><rect x="280" y="34" width="90" height="8" rx="4"/></g>
+  <!-- shelves left/right -->
+  <g><rect x="0" y="150" width="78" height="150" fill="#45474b"/>
+    <g fill="#4591c7"><rect x="6" y="160" width="14" height="22"/><rect x="24" y="164" width="14" height="18" fill="#7dbe42"/><rect x="42" y="158" width="14" height="24" fill="#aed7f4"/><rect x="60" y="162" width="12" height="20"/></g>
+    <rect x="0" y="184" width="78" height="4" fill="#80878b"/>
+    <g fill="#aed7f4"><rect x="6" y="196" width="14" height="22"/><rect x="24" y="200" width="14" height="18" fill="#4591c7"/><rect x="42" y="194" width="14" height="24" fill="#7dbe42"/><rect x="60" y="198" width="12" height="20"/></g>
+    <rect x="0" y="220" width="78" height="4" fill="#80878b"/></g>
+  <g><rect x="322" y="150" width="78" height="150" fill="#45474b"/>
+    <g fill="#7dbe42"><rect x="328" y="160" width="14" height="22"/><rect x="346" y="164" width="14" height="18" fill="#4591c7"/><rect x="364" y="158" width="14" height="24" fill="#aed7f4"/><rect x="382" y="162" width="12" height="20"/></g>
+    <rect x="322" y="184" width="78" height="4" fill="#80878b"/>
+    <g fill="#4591c7"><rect x="328" y="196" width="14" height="22" fill="#aed7f4"/><rect x="346" y="200" width="14" height="18"/><rect x="364" y="194" width="14" height="24" fill="#7dbe42"/><rect x="382" y="198" width="12" height="20" fill="#aed7f4"/></g>
+    <rect x="322" y="220" width="78" height="4" fill="#80878b"/></g>
+  <!-- counter -->
+  <rect x="96" y="262" width="208" height="80" fill="#f5f6f8"/><rect x="96" y="256" width="208" height="10" fill="#80878b"/>
+  <!-- screen, slightly perspective-warped -->
+  <rect x="196" y="84" width="8" height="34" fill="#45474b"/>
+  <path d="M112 108 L290 96 L294 222 L108 230 Z" fill="#121e33"/>
+  <path d="M120 116 L282 105 L285 213 L117 220 Z" fill="#243e66"/>
+  <!-- creative on screen -->
+  <path d="M120 116 L282 105 L285 213 L117 220 Z" fill="#7dbe42" opacity=".18"/>
+  <g font-family="Montserrat,Arial,sans-serif" font-weight="800" fill="#ffffff">
+    <text x="136" y="150" font-size="22" transform="rotate(-3 136 150)">YOUR AD</text>
+    <text x="136" y="176" font-size="22" transform="rotate(-3 136 176)">HERE</text>
+  </g>
+  <rect x="134" y="188" width="70" height="18" rx="9" fill="#7dbe42" transform="rotate(-3 134 188)"/>
+  <!-- corner pins -->
+  <g fill="#ffffff" stroke="#7dbe42" stroke-width="3"><circle cx="120" cy="116" r="6"/><circle cx="282" cy="105" r="6"/><circle cx="285" cy="213" r="6"/><circle cx="117" cy="220" r="6"/></g>
+  <!-- POP tag -->
+  <g font-family="Montserrat,Arial,sans-serif" font-weight="700" font-size="12">
+    <rect x="20" y="352" width="132" height="28" rx="14" fill="#121e33"/>
+    <circle cx="38" cy="366" r="5" fill="#7dbe42"/>
+    <text x="50" y="370" fill="#fff" letter-spacing="1">LIVE · S09</text>
+  </g>
+</svg>
